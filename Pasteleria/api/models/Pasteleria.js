@@ -8,7 +8,13 @@
 module.exports = {
 
   attributes: {
-
+      nombre: 'string',
+      ciudad: 'string',
+      correo: 'email',
+      pasteles: {
+          collection: 'Pastel',
+          via: 'owner'
+      }
   }
 };
 

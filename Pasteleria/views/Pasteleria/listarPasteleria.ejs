@@ -1,0 +1,28 @@
+<div style='background-color:white;color:black;'>
+
+  <h1>Lista de las Pastelerias</h1>
+  <p>¡Edita tu pasteleria en la aplicación!</p>
+<table  class="table table-hover">
+    <th>Nombre</th>
+    <th>Ciudad</th>
+    <th>Correo</th>
+    <th colspan="2" class="text-center">Acciones</th>
+    <%_.each(pastelerias,function(Pasteleria){%>
+    <tr>
+        <td><%=Pasteleria.nombre%></td>
+        <td><%=Pasteleria.ciudad%></td>
+        <td><%=Pasteleria.correo%></td>
+        <td><a href="/Pasteleria/editar/<%=Pasteleria.id%>" class="btn btn-success btn-sm">Editar</a></td>
+        <td>
+            <form action="/Pasteleria/destroy/<%=Pasteleria.id%>" method="post">
+                <input type="submit" class="btn btn-sm btn-danger" value="Eliminar">
+                
+            </form>
+        </td>
+    </tr>
+    <% 
+    })%>
+</table>
+    
+  
+</div>

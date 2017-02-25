@@ -1,0 +1,35 @@
+<div style='background-color:white;color:black;'>
+
+    <h1>Lista de los Pasteles</h1>
+    <p>¡Edita tu pastel en la aplicación!</p>
+    <table class="table table-hover">
+        <th>Nombre</th>
+        <th>tiempo de Elaboracion</th>
+        <th>Url Foto</th>
+        <th colspan="2" class="text-center">Acciones</th>
+        <%_.each(pasteles,function(Pastel){%>
+            <tr>
+                <td>
+                    <%=Pastel.nombre%>
+                </td>
+                <td>
+                    <%=Pastel.tiempoElaboracion%>
+                </td>
+                <td>
+                    <%=Pastel.urlfoto%>
+                </td>
+               
+                <td><a href="/Pastel/editar/<%=Pastel.id%>" class="btn btn-success btn-sm">Editar</a></td>
+                <td>
+                    <form action="/Pastel/destroy/<%=Pastel.id%>" method="post">
+                        <input type="submit" class="btn btn-sm btn-danger" value="Eliminar">
+
+                    </form>
+                </td>
+            </tr>
+            <% 
+    })%>
+    </table>
+
+
+</div>

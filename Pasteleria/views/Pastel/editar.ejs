@@ -1,0 +1,37 @@
+<div style='background-color:white;color:black;'>
+
+ <h1>Editar Pastel</h1>
+  <p>¡Registra tu pastel en la aplicación!</p>
+
+  <form action="/Pastel/update/<%=pastel.id%>" method="post">
+    <div class="form-group">
+      <label>Nombre</label>
+      <input required type="text" class="form-control" value="<%=pastel.nombre%>" name="nombre">
+    </div>
+
+    <div class="form-group">
+      <label>Tiempo de Elaboracion</label>
+      <input type="integer" class="form-control" value="<%=pastel.tiempoElaboracion%>" name="tiempoElaboracion">
+    </div>
+    
+     <div class="form-group">
+      <label>Foto</label>
+      <input required type="url" class="form-control" value="<%=pastel.urlfoto%>" name="urlFoto">
+    </div>
+   
+    <select class="form-control" name="idPasteleria">
+      <% for(var i=0; i<pasteleria.length; i++){ %>
+        <option value='<%=pasteleria[i].id%>'>
+          <%=pasteleria[i].nombre%>
+        </option>
+        <%  } %>
+    </select>
+
+
+
+    <br>
+   
+    <button type="submit" class="btn btn-success">Crear Pastel</button>
+
+  </form>
+</div>

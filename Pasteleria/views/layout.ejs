@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+    <title> Prueba JavaScript Pasteleria</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <!-- CSS Bootstrap en la carpeta bootstrap -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 
+    <!-- JQuery y JavaScript Bootstrap en la carpeta bootstrap-->
+    <script src="/bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
     <!--
         Stylesheets and Preprocessors
         ==============================
@@ -29,11 +34,61 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/styles/estilos.css">
+    <link rel="stylesheet" href="/styles/estilos2.css">
+    <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
   </head>
 
-  <body>
-    <%- body %>
+
+   
+     <nav class="navbar navbar-default">
+     <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span>MENU</span>
+          </button>
+          <a class="navbar-brand" href="/">Pasteleria App</a>
+        </div>
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pastelerias <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/Pasteleria/crearPasteleria">Crear Pasteleria</a></li>
+            <li><a  href="/Pasteleria/listarPasteleria">Editar/Listar Pasteleria</a></li>
+         </ul>
+         
+        </li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pastel<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/Pastel/crearPastel">Crear Pastel</a></li>
+            <li><a  href="/Pastel/ListarPastel">Editar/Listar Pastel </a></li>
+         </ul>
+         
+        </li>
+        
+      </ul>
+     
+     
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+   
+   
+   
+    <div class="container">
+      <%- body %>
+    </div>
+
+
+    <div class="navbar navbar-fixed-bottom">
+      Desarrolado por Escuela Politecnica Nacional
+    </div>
 
 
 
@@ -59,6 +114,7 @@
     -->
 
     <!--TEMPLATES-->
+    <script type="text/javascript" src="/jst.js"></script>
     <!--TEMPLATES END-->
 
 
@@ -86,6 +142,7 @@
     -->
 
     <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

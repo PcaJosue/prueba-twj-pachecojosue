@@ -8,7 +8,12 @@
 module.exports = {
 
   attributes: {
-
+      nombre: 'string',
+      tiempoElaboracion: 'integer',
+      urlfoto: 'string',
+      owner: {
+        model: 'Pasteleria'
+  }
   }
 };
 
